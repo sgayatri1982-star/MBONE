@@ -6,26 +6,27 @@ import { Coins, Gift, Vote, Zap } from 'lucide-react';
 export default function TokenUtilitySection() {
   const utilities = [
     {
-      icon: Coins,
       title: 'Staking Rewards',
-      description: 'Stake your $MBONE tokens and earn passive rewards from transaction fees.'
+      description: 'Stake your $MBONE tokens and earn passive rewards from transaction fees.',
+      image: '/image/hero-bone.png'
     },
     {
-      icon: Gift,
       title: 'Holder Airdrops',
-      description: 'Regular airdrops and exclusive benefits for long-term diamond hands.'
+      description: 'Regular airdrops and exclusive benefits for long-term diamond hands.',
+      image: '/image/hero-bone.png'
     },
     {
-      icon: Vote,
       title: 'Governance Rights',
-      description: 'Vote on community proposals and shape the future of MILLIONBONE.'
+      description: 'Vote on community proposals and shape the future of MILLIONBONE.',
+      image: '/image/hero-bone.png'
     },
     {
-      icon: Zap,
       title: 'Burn Mechanism',
-      description: 'Every transaction burns tokens, making your holdings more valuable over time.'
+      description: 'Every transaction burns tokens, making your holdings more valuable over time.',
+      image: '/image/hero-bone.png'
     }
   ];
+
 
   return (
     <section className="py-20 bg-white">
@@ -53,20 +54,36 @@ export default function TokenUtilitySection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative"
+              className="group perspective"
             >
-              <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 text-center hover-lift shadow-lg border group-hover:border-brand-accent transition-all duration-300">
-                <div className="bg-brand-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent/20 transition-colors">
-                  <utility.icon className="h-8 w-8 text-brand-accent" />
+              <div className="relative w-full h-72 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+
+                {/* FRONT SIDE */}
+                <div
+                  className="absolute inset-0 rounded-2xl overflow-hidden backface-hidden flex items-end justify-center"
+                  style={{
+                    backgroundImage: `url(${utility.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/40"></div>
+
+                  <h3 className="relative z-10 text-white text-xl font-bold mb-6 px-4 text-center">
+                    {utility.title}
+                  </h3>
                 </div>
-                
-                <h3 className="text-brand-primary font-bold text-lg mb-3">
-                  {utility.title}
-                </h3>
-                
-                <p className="text-brand-secondary leading-relaxed">
-                  {utility.description}
-                </p>
+
+                {/* BACK SIDE */}
+                <div className="absolute inset-0 rounded-2xl bg-brand-primary text-white p-6 rotate-y-180 backface-hidden flex flex-col justify-center text-center">
+                  <h3 className="text-xl font-bold mb-3">
+                    {utility.title}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {utility.description}
+                  </p>
+                </div>
+
               </div>
             </motion.div>
           ))}

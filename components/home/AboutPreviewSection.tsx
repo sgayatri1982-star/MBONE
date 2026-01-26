@@ -7,17 +7,17 @@ import { Heart, Shield, Rocket, ArrowRight } from 'lucide-react';
 export default function AboutPreviewSection() {
   const features = [
     {
-      icon: Heart,
+      image: '/icons/community2.png',  
       title: 'Community First',
       description: 'Built by the community, for the community. Every decision is made together.'
     },
     {
-      icon: Shield,
+      image: '/icons/transparency.png',
       title: 'Fully Transparent',
       description: 'Open source, audited smart contracts. Complete transparency in all operations.'
     },
     {
-      icon: Rocket,
+      image: '/icons/moonmission.png',
       title: 'Moon Mission',
       description: 'Diamond hands only. We are building something that lasts forever.'
     }
@@ -69,7 +69,12 @@ export default function AboutPreviewSection() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="bg-brand-accent/10 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="h-6 w-6 text-brand-accent" />
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="h-7 w-7 object-contain"
+                    />
+
                   </div>
                   <div>
                     <h3 className="text-brand-primary font-bold text-lg mb-2">
@@ -85,6 +90,6 @@ export default function AboutPreviewSection() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
   );
 }
