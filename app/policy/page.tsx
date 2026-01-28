@@ -50,9 +50,6 @@ export default function Policy() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-full shadow-lg inline-block mb-8">
-              <Shield className="h-16 w-16 text-brand-accent" />
-            </div>
             <h1 className="text-4xl md:text-5xl font-black text-brand-primary mb-4">
               POLICIES
             </h1>

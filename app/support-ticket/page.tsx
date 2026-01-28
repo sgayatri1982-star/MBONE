@@ -89,12 +89,8 @@ export default function SupportTicket() {
               className="text-center"
             >
               <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border">
-                <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="h-10 w-10 text-green-600" />
-                </div>
-                
                 <h1 className="text-3xl md:text-4xl font-black text-brand-primary mb-4">
-                  Ticket Submitted Successfully!
+                  TICKET SUBMITTED SUCCESSFULLY!
                 </h1>
                 
                 <p className="text-xl text-brand-secondary mb-8">

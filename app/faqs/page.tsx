@@ -131,9 +131,6 @@ export default function FAQs() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-full shadow-lg inline-block mb-8">
-              <HelpCircle className="h-16 w-16 text-brand-accent" />
-            </div>
             <h1 className="text-4xl md:text-5xl font-black text-brand-primary mb-4">
               FREQUENTLY ASKED QUESTIONS
             </h1>
